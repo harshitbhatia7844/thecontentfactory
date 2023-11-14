@@ -17,13 +17,83 @@
 
 <body>
     <div class="main bg-dark text-white w-auto h-auto">
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">    
             <img class="rounded-4 d-none d-lg-block" src="logo.png" alt="Logo" height="60px" width="180px">
             <!-- <a class="navbar-brand" href="#"><h3><b>The Content Factory</b></h3></a> -->
             <!-- <div class="btn-group"> -->
             <div class="container-fluid">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                    Category <i class="fas fa-boxes"></i>
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">The Contant Factory</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body p-3 text-white w-100 bg-black">
+                        <img class="rounded-4 mb-3 w-100" src="logo.png" alt="Logo">
+                        <a href="#" class="text-white text-decoration-none">
+                            <span class="fs-2 fw-bold">Categories</span>
+                        </a>
+                        <hr>
+                            <ul class="nav fs-4 nav-pills flex-column mb-auto">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active" aria-current="page">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Data Structures</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">HTML</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">CSS</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Java</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">C</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">C++</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Python</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Ruby</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">PHP</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">SQL</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Bootstrap</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">ReactJS</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">AngularJS</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Vue.js</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link text-white">Node.js</a>
+                                </li>
+                            </ul>
+                        <hr>
+                    </div>
+                  </div>
+                <button class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false">
+                    <!-- Category <i class="fas fa-boxes"></i> -->
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">C</a></li>
@@ -44,14 +114,12 @@
             </div>
         </nav>
         <div class="container-fluid d-flex m-0 p-0 w-100">
-            <div
-                class="d-none d-md-flex flex-column flex-shrink-0 p-3 text-white w-25 border border-black rounded-end-4 bg-black mt-5">
+            <div class="d-none d-md-flex flex-column flex-shrink-0 p-3 text-white w-25 border border-black rounded-end-4 bg-black mt-5">
                 <img class="rounded-4 mb-3 d-none d-xl-block w-100" src="logo.png" alt="Logo">
                 <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-2 fw-bold">Categories</span>
                 </a>
                 <hr>
-                <div class="">
                     <ul class="nav fs-4 nav-pills flex-column mb-auto">
                         <li class="nav-item">
                             <a href="#" class="nav-link active" aria-current="page">Home</a>
@@ -105,7 +173,6 @@
                             <a href="#" class="nav-link text-white">Node.js</a>
                         </li>
                     </ul>
-                </div>
                 <hr>
             </div>
             <div class="content d-block d-lg-flex w-100">
@@ -383,20 +450,18 @@ Hello, World!
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-gradient">
-            <footer class="row row-cols-5 flex-wrap py-5 mx-5 border-top">
-              <div class="col">
-                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <div class="container-fluid text-center text-sm-start bg-gradient w-100">
+            <footer class="d-sm-flex justify-content-center py-5 mx-5 border-top">
+              <div class="col d-md-block">
                   <img class="w-100 rounded-4" src="logo.png" alt="">
-                </a>
                 <p class="text-white-50">© 2023</p>
               </div>
           
-              <div class="col">
+              <div class="col d-none d-sm-block">
           
               </div>
           
-              <div class="col">
+              <div class="col mb-3">
                 <h5>About Us</h5>
                 <ul class="nav flex-column">
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Company</a></li>
@@ -407,7 +472,7 @@ Hello, World!
                 </ul>
               </div>
           
-              <div class="col">
+              <div class="col mb-3">
                 <h5>Terms</h5>
                 <ul class="nav flex-column">
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Terms</a></li>
@@ -418,7 +483,7 @@ Hello, World!
                 </ul>
               </div>
           
-              <div class="col">
+              <div class="col mb-3">
                 <h5>Cources</h5>
                 <ul class="nav flex-column">
                   <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Programing</a></li>
