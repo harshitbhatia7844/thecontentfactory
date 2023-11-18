@@ -23,13 +23,13 @@
                 <button class="navbar-toggler d-md-none p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start d-md-none w-75" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">The Contant Factory</h5>
+                      <h5 class="offcanvas-title text-primary" id="offcanvasNavbarLabel">The Contant Factory</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body p-3 text-white w-100 bg-black">
-                        <img class="rounded-4 mb-3 w-100" src="logo.png" alt="Logo">
+                        <img class="rounded-4 mb-3" src="tcflogo.png" alt="Logo" width="60%">
                         <a href="#" class="text-white text-decoration-none">
                             <span class="fs-2 fw-semibold">Categories</span>
                         </a>
@@ -114,7 +114,7 @@
         </nav>
         <div class="container-fluid bg-black bg-opacity-75 text-white-50 d-flex m-0 p-0 w-100">
             <div class="d-none d-md-block p-3 text-white w-25 rounded-end-4 bg-black bg-opacity-50 mt-5">
-                <img class="rounded-4 mb-3 d-none d-xl-block w-100" src="tcflogo.png" alt="Logo">
+                <img class="rounded-4 mb-3 d-none d-xl-block" src="tcflogo.png" alt="Logo" width="65%">
                 <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-3 fw-semibold">Categories</span>
                 </a>
@@ -263,113 +263,6 @@ int main() {
    
 }
 </pre>
-                        <p>which produces the following result &minus;</p>
-                        <pre class="result notranslate">
-Hello, World!
-</pre>
-                        <p>If we make all these whitespace characters visible, then the above program will look like
-                            this and you will not be able to compile it &minus;</p>
-                        <pre class="prettyprint notranslate">
-#include &lt;stdio.h&gt;\n
-\n
-int main()\n
-{
-   \n
-   \t/* printf() function to write Hello, World! */
-   \n 
-   \tprintf(\t"Hello, World!"\t);\n
-   \n
-}\n
-</pre>
-                        <h3>Semicolons</h3>
-                        <p>Every individual statement in a C Program must be ended with a semicolon (<b>;</b>), for
-                            example, if you want to write "Hello, World!" twice, then it will be written as follows
-                            &minus;</p>
-                        <div class="demo-view">
-                            <a href="#" target="_blank" rel="nofollow" class="demo"><i
-                                    class="fa-external-link"></i> Live Demo</a>
-                        </div>
-                        <pre class="prettyprint notranslate">
-#include &lt;stdio.h&gt;
-
-int main() {
-   /* printf() function to write Hello, World! */
-   printf( "Hello, World!\n" );
-   printf( "Hello, World!" );
-}
-</pre>
-                        <p>This program will produce the following result &minus;</p>
-                        <pre class="result notranslate">
-Hello, World! 
-Hello, World!
-</pre>
-                        <p>Here, we are using a new line character <b>\n</b> in the first printf() function to create a
-                            new line. Let us see what happens if we do not use this new line character &minus;</p>
-                        <div class="demo-view">
-                            <a href="#" target="_blank" rel="nofollow" class="demo"><i
-                                    class="fa-external-link"></i> Live Demo</a>
-                        </div>
-                        <pre class="prettyprint notranslate">
-#include &lt;stdio.h&gt;
-
-int main() {
-   /* printf() function to write Hello, World! */
-   printf( "Hello, World!" );
-   printf( "Hello, World!" );
-}
-</pre>
-                        <p>This program will produce the following result &minus;</p>
-                        <pre class="result notranslate">
-Hello, World! Hello, World!
-</pre>
-                        <p>We will learn identifiers and keywords in next few chapters.</p>
-                        <h3>Program Explanation</h3>
-                        <p>Let us understand how the above C program works. First of all, the above program is converted
-                            into a binary format using C compiler. So let’s put this code in test.c file and compile it
-                            as follows &minus;</p>
-                        <pre class="result notranslate">
-$gcc test.c -o demo
-</pre>
-                        <p>If there is any grammatical error (Syntax errors in computer terminologies), then we fix it
-                            before converting it into binary format. If everything goes fine, then it produces a binary
-                            file called <b>demo</b>. Finally, we execute the produced binary demo as follows &minus;</p>
-                        <pre class="result notranslate">
-$./demo
-</pre>
-                        <p>which produces the following result &minus;</p>
-                        <pre class="result notranslate">
-Hello, World!
-</pre>
-                        <p>Here, when we execute the binary <b>a.out</b> file, the computer enters inside the program
-                            starting from main() and encounters a printf() statement. Keep a note that the line inside
-                            /*....*/ is a comment and it is filtered at the time of compilation. So printf() function
-                            instructs the computer to print the given line at the computer screen. Finally, it
-                            encounters a right curly brace which indicates the end of main() function and exits the
-                            program.</p>
-                        <h2>Syntax Error</h2>
-                        <p>If you do not follow the rules defined by the programing language, then at the time of
-                            compilation, you will get syntax errors and the program will not be compiled. From syntax
-                            point of view, even a single dot or comma or a single semicolon matters and you should take
-                            care of such small syntax as well. In the following example, we have skipped a semicolon,
-                            let's try to compile the program &minus;</p>
-                        <div class="demo-view">
-                            <a href="#" target="_blank" rel="nofollow" class="demo"><i
-                                    class="fa-external-link"></i> Live Demo</a>
-                        </div>
-                        <pre class="prettyprint notranslate">
-#include &lt;stdio.h&gt;
-
-main() {
-   printf("Hello, World!")
-}
-</pre>
-                        <p>This program will produce the following result &minus;</p>
-                        <pre class="result notranslate">
-main.c: In function 'main':
-main.c:7:1: error: expected ';' before '}' token
- }
- ^
-</pre>
                         <p>So the bottom-line is that if you are not following proper syntax defined by the programming
                             language in your program, then you will get syntax errors. Before attempting another
                             compilation, you will need to fix them and then proceed.</p>
@@ -427,7 +320,7 @@ Hello, World!
         <div class="container-fluid text-center text-sm-start text-white bg-dark w-100">
             <footer class="d-sm-flex justify-content-center py-5 mx-5 border-top">
                 <div class="col d-md-block">
-                    <img class="w-100 rounded-4" src="tcflogo.png" alt="">
+                    <img class="w-75 rounded-4" src="tcflogo.png" alt="">
                     <address><i class="fa fa-location-arrow" aria-hidden="true"></i>
                         <p> DS-5, 3rd Floor, MUIT, Sector-110, Noida, Uttar Pradesh - 201304</p>
                         <p class="text-white-50">@ thecontentfactory@tcf.in</p>
